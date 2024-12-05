@@ -65,8 +65,8 @@ chromosomewa=opt$chr
 chromosome_forgene=gsub(pattern="chr",
                             replacement="",
                             x=chromosomewa)
-starts=opt$start
-ends=opt$end
+starts=as.numeric(opt$start)
+ends=as.numeric(opt$end)
 Groups=opt$group
 
 if (!requireNamespace("BiocManager", quietly = TRUE)){
@@ -100,10 +100,6 @@ library(Gviz)
 if(!require(areaplot)){
         install.packages("areaplot",repos = "http://cran.us.r-project.org")}
 library(areaplot)
-
-if(!require(wesanderson)){
-        install.packages("wesanderson",repos = "http://cran.us.r-project.org")}
-library(wesanderson)
 
 if(!require(EnsDb.Hsapiens.v86)){
     print ("EnsDb.Hsapiens.v86 is not avaiable in your system")
