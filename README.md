@@ -41,3 +41,8 @@ Example:
     	--proteins "WDR5,DPY30,ASH2L,KMT2D,PAXIP1,NCOA6,KMT2C,RBBP5;U2AF1,HSPA8" \
      	--bait UTY \
       	--title "UTY nuclear"
+
+B) For genometrack.R
+
+Usage: 
+	Rscript genomttrack.R [option]
