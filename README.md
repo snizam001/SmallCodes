@@ -1,6 +1,6 @@
 Small codes:
 
-A) For VolcanoPlot.R:
+**A) For VolcanoPlot.R**:
 
 	This script will generate volcano plot if you have perseus matrix and curve data.
  
@@ -44,7 +44,7 @@ Example:
      	--bait UTY \
       	--title "UTY nuclear"
 
-B) For genomeTrack.R
+**B) For genomeTrack.R:**
 
 	This script will generate genome track files. 
 
