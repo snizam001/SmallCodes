@@ -2,6 +2,8 @@ Small codes:
 
 A) For VolcanoPlot.R:
 
+	This script will generate volcano plot if you have perseus matrix and curve data.
+ 
 Usage: 
 
 	Rscript VolcanoPlot.R [options]
@@ -42,7 +44,46 @@ Example:
      	--bait UTY \
       	--title "UTY nuclear"
 
-B) For genometrack.R
+B) For genomeTrack.R
+
+	This script will generate genome track files. 
 
 Usage: 
-	Rscript genomttrack.R [option]
+	Rscript genomeTrack.R [option]
+
+Options:
+
+	-i CHARACTER, --inputFiles=CHARACTER
+		Input bigwig file. Give full path and provide as comma separated values
+
+	-o CHARACTER, --outputImagefile=CHARACTER
+		Name of the output image files
+
+	-c CHARACTER, --chr=CHARACTER
+		chromosome example chr1 (always use "chr")
+
+	-s CHARACTER, --start=CHARACTER
+		starting location of genomic region (hg38)
+
+	-e CHARACTER, --end=CHARACTER
+		ending location of genomic region (hg38)
+
+	-g CHARACTER, --group=CHARACTER
+		provide group of bw file. Suppose you have three input file and you want to group first two samples in one and third as another, then give it as follows: --group 1,1;2
+
+	-h, --help
+		Show this help message and exit
+
+Example:
+	
+ 	infiles="MV411-JUN-NT1_expr.ScaledSpikeIn.bw,MV411-JUN-G4_expr.ScaledSpikeIn.bw,MV411-MEN-NT1_expr.ScaledSpikeIn.bw,MV411-MEN-G4_expr.ScaledSpikeIn.bw,MV411-MLL1-NT1_expr.ScaledSpikeIn.bw,MV411-MLL1-G4_expr.ScaledSpikeIn.bw"
+ 
+	Rscript genomeTrack.R  \
+ 	-i $infiles \
+	-o genomicTrack1.jpeg \
+	--chr chr6 \
+	--start 170554302 \
+	--end 170554303 \
+	--group "1,1;2,2;3,3;4,4"
+
+Rscript genomeTrack.R 
